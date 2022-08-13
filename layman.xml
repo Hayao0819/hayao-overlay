@@ -1,0 +1,12 @@
+<repositories version="1.1" encoding="unicode">
+  <repo quality="experimental" priority="50">
+    <name>hayao</name>
+    <description>Hayao's personal packages</description>
+    <homepage>https://hayao.fascode.net</homepage>
+    <owner>
+      <email>hayao@fascode.net</email>
+      <name>Yamada Hayao</name>
+    </owner>
+    <source type="git">https://github.com/Hayao0819/hayao-overlay.git</source>
+  </repo>
+</repositories>
