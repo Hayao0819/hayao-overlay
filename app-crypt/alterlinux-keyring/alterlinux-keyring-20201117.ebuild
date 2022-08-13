@@ -11,10 +11,22 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+
 src_prepare() {
-	default
+	rm -f Makefile
+	eapply_user
 }
 
 src_install(){
-	emake PREFIX='/usr' DESTDIR="${D}" install
+	#make PREFIX='/usr' DESTDIR="${D}/" install
+
+	run(){
+		echo "$@"
+		"$@"
+	}
+
+	run mkdir -p "${D}/usr/share/pacman/keyrings"
+	for file in "alterlinux-revoked" "alterlinux-trusted" "alterlinux.gpg"; do
+		run install  -m0644 "$file" "${D}/usr/share/pacman/keyrings/"
+	done
 }
