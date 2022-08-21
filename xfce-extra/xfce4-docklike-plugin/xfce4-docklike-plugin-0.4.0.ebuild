@@ -7,18 +7,19 @@ inherit autotools xdg-utils
 
 DESCRIPTION="A modern, minimalist taskbar for Xfce"
 HOMEPAGE="https://gitlab.xfce.org/panel-plugins/xfce4-docklike-plugin/"
+_BASEVERSION="${PV%.0}"
 
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="${HOMEPAGE}.git"
 	inherit git-r3
 else
-	SRC_URI="$HOMEPAGE/-/archive/$P/$PN-$P.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm64 ~x86"
+	#SRC_URI="$HOMEPAGE/-/archive/$P/$PN-$P.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://archive.xfce.org/src/panel-plugins/$PN/$_BASEVERSION/$P.tar.bz2 -> ${P}.tar.bz2"
 fi
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 arm64 x86"
 IUSE=""
 
 RDEPEND="
