@@ -21,14 +21,15 @@ if [[ -n ${MOZ_ESR} ]] ; then
 	MOZ_PV="${MOZ_PV}esr"
 fi
 
-MOZ_PN="${PN%-developer-edition-bin}"
+MOZ_PN="${PN%-bin}"
+
 MOZ_P="${MOZ_PN}-${MOZ_PV}"
 MOZ_PV_DISTFILES="${MOZ_PV}${MOZ_PV_SUFFIX}"
 MOZ_P_DISTFILES="${MOZ_PN}-${MOZ_PV_DISTFILES}"
 
 inherit desktop linux-info pax-utils xdg
 
-MOZ_SRC_BASE_URI="https://archive.mozilla.org/pub/${MOZ_PN}/releases/${MOZ_PV}"
+MOZ_SRC_BASE_URI="https://archive.mozilla.org/pub/devedition/releases/${MOZ_PV}"
 
 SRC_URI="amd64? ( ${MOZ_SRC_BASE_URI}/linux-x86_64/en-US/${MOZ_P}.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
 	x86? ( ${MOZ_SRC_BASE_URI}/linux-i686/en-US/${MOZ_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
@@ -267,7 +268,7 @@ src_install() {
 	done
 
 	# Install menu
-	local app_name="Mozilla ${MOZ_PN^} (bin)"
+	local app_name="Mozilla ${MOZ_PN^} Developer Edition"
 	local desktop_file="${FILESDIR}/${PN}-r3.desktop"
 	local desktop_filename="${PN}.desktop"
 	local exec_command="${PN}"
