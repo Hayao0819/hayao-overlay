@@ -21,7 +21,7 @@ if [[ -n ${MOZ_ESR} ]] ; then
 	MOZ_PV="${MOZ_PV}esr"
 fi
 
-MOZ_PN="${PN%-bin}"
+MOZ_PN="${PN%-developer-edition-bin}"
 
 MOZ_P="${MOZ_PN}-${MOZ_PV}"
 MOZ_PV_DISTFILES="${MOZ_PV}${MOZ_PV_SUFFIX}"
