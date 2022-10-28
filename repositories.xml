@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>hayao-overlay</name>
+      <description lang="en">Hayao's personal overlay</description>
+        <homepage>https://github.com/Hayao0819/hayao-overlay</homepage>
+        <owner type="person">
+            <name>Yamada Hayao</name>
+            <email>hayao@fascode.net</email>
+        </owner>
+        <source type="git">git://github.com/Hayao0819/hayao-overlay.git</source>
+        <feed>https://github.com/Hayao0819/hayao-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
