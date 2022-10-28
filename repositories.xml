@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <repositories version="1.0">
   <repo quality="experimental" status="unofficial">
-    <name>hayao-overlay</name>
+    <name>hayao</name>
       <description lang="en">Hayao's personal overlay</description>
         <homepage>https://github.com/Hayao0819/hayao-overlay</homepage>
         <owner type="person">
